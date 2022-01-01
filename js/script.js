@@ -15,7 +15,12 @@ addbtn.addEventListener("click",function(e){
  {
   notesobj = JSON.parse(notes); 
  }
+ if(addtxt.value == null){
+  alert("Note should not empty")
+ }
+ else{
  notesobj.push(addtxt.value);
+ }
  localStorage.setItem("notes",JSON.stringify(notesobj));
  addtxt.value = "";
  shownotes();
